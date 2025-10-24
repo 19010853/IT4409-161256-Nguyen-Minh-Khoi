@@ -194,6 +194,110 @@ footer p {
     margin: 5px 0;
 }
 
+/* === BỔ SUNG CSS CHO BÀI TẬP 3 === */
+
+/* Class để ẩn phần tử (như form) */
+.hidden {
+    display: none;
+}
+
+/* Tạo kiểu cho thanh tìm kiếm */
+.search-bar {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.search-bar label {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.search-bar input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 350px; /* Độ rộng có thể điều chỉnh */
+    font-size: 1rem;
+}
+
+/* Nút "Thêm sản phẩm" */
+.add-product-controls {
+    margin-bottom: 20px;
+}
+
+#toggleFormBtn {
+    background-color: #28a745; /* Màu xanh lá */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#toggleFormBtn:hover {
+    background-color: #218838;
+}
+
+/* Tạo kiểu cho form thêm sản phẩm mới */
+#addProductForm {
+    max-width: 600px; 
+    margin: 0 auto 20px auto; /* Căn giữa và tạo khoảng cách */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+#addProductForm h3 {
+    text-align: center;
+    margin-top: 0;
+    color: #333;
+}
+
+#addProductForm div {
+    margin-bottom: 15px; 
+}
+
+#addProductForm label {
+    display: block; 
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#addProductForm input[type="text"],
+#addProductForm input[type="url"],
+#addProductForm textarea {
+    width: 100%; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
+/* Nút "Lưu" trong form mới (sử dụng lại style của .form-actions) */
+#addProductForm .form-actions button {
+    background-color: #007bff; 
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease; 
+}
+
+#addProductForm .form-actions button:hover {
+    background-color: #0056b3;
+}
+
+/* === KẾT THÚC BỔ SUNG CSS === */
+
+
 @media (max-width: 768px) {
     /* ĐÃ XÓA: '.product-item { flex-basis: 45%; }'
        Không cần thiết nữa, 'grid-template-columns' sẽ
@@ -206,6 +310,15 @@ footer p {
 
     nav ul {
         margin-top: 15px;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-bar input[type="text"] {
+        width: 100%;
     }
 }
 

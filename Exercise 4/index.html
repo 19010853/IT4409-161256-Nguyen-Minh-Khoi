@@ -28,6 +28,46 @@
 
         <section id="products">
             <h2>Featured Books</h2>
+
+            <div class="search-bar">
+                <label for="searchInput">Tìm sách:</label>
+                <input type="text" id="searchInput" placeholder="Nhập tên sách...">
+            </div>
+
+            <div class="add-product-controls">
+                <button id="toggleFormBtn">Thêm sản phẩm</button>
+            </div>
+
+            <form id="addProductForm" class="hidden">
+                <h3>Thêm sản phẩm mới</h3>
+                <div>
+                    <label for="newTitle">Tên sách:</label>
+                    <input type="text" id="newTitle" name="newTitle" required>
+                </div>
+                <div>
+                    <label for="newImage">URL Hình ảnh:</label>
+                    <input type="url" id="newImage" name="newImage" placeholder="https://example.com/image.jpg" required>
+                </div>
+                <div>
+                    <label for="newDesc">Mô tả:</label>
+                    <textarea id="newDesc" name="newDesc" rows="3" required></textarea>
+                </div>
+                <div>
+                    <label for="newPrice">Giá (VND):</label>
+                    <input type="number" id="newPrice" name="newPrice" placeholder="Ví dụ: 89000" min="1" required>
+                </div>
+
+                <div>
+                    <p id="formError" class="form-error hidden"></p>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit">Lưu sản phẩm</button>
+                    <button type="button" id="cancelBtn">Hủy</button>
+                </div>
+            </form>
+
+
             <div class="product-list">
                 <article class="product-item">
                     <img src="https://i.harperapps.com/hcanz/covers/9780062315007/y648.jpg" alt="The Alchemist cover">
@@ -90,5 +130,6 @@
         <p>Address: 123 Norodom Street, Knowledge District, Phnom Penh</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
